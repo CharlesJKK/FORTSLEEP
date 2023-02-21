@@ -1,0 +1,114 @@
+
+.maint-title{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.maint-title h1{
+    background: linear-gradient(180deg, rgba(121, 121, 121, 0.4) 20.25%, #ABABAB 69.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    mix-blend-mode: color-dodge;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+.maint-title p{
+    font-size: 1.25rem;
+}
+
+.mainButton-container{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.mainButton-container button{
+    cursor: pointer;
+    position: relative;
+}
+
+.mainButton-container button::before{
+    content: "Comprar agora";
+    color: var(--cor-0);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    width: max-content;
+    right: -40px;
+    top: 15px;
+}
+
+.main-image img{
+    width: 850px;
+}
+
+.main-image img{
+    margin: 0 auto;
+}
+
+.about-quality{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.quality-container{
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    width: 124px;
+    height: 124px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(112, 166, 185, 0) 0%, #31505C 100%);
+    border-top: 1px solid #FEFEFE;
+    border-left: 1px solid #FEFEFE;
+    border-radius: 50%;
+    box-shadow: inset 13.32px 0.74px 30.34px rgba(26, 66, 80, 0.45);
+}
+
+.quality-container img{
+    margin: 0 auto;
+    width: 50px;
+}
+
+.quality-container p{
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .maint-title{
+        padding-top: 20px;
+    }
+
+    .maint-title h1{
+        font-size: 3rem;
+    }
+
+    .about-quality{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 600px){
+    .maint-title h1{
+        font-size: 2.5rem;
+    }
+
+    .maint-title p{
+        font-size: 1rem;
+    }
+
+    .quality-container{
+        padding: 5px;
+        max-width: 94px;
+        max-height: 94px;
+    }
+    
+    .quality-container p{
+        font-size: 0.6rem;
+    }
+}
