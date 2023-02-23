@@ -1,0 +1,67 @@
+#catalog h2{
+    font-size: 2.25rem;
+    color: #5E97AB;
+    position: relative;
+}
+
+#catalog h2::after{
+    content: "";
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, #5E97AB 0%, rgba(94, 151, 171, 0) 100%);
+    left: 250px;
+    bottom: 18px;
+    position: absolute;
+}
+
+.catalog-container{
+    display: flex;
+    padding: 60px 80px;
+    align-self: center;
+}
+
+.catalog-options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.catalog-options li img{
+    padding: 10px;
+    width: 200px;
+}
+
+.optionOn{
+    background: linear-gradient(89.87deg, #436E7E 10.28%, #12212E 89.59%);
+    border-radius: 50px 0px 0px 50px;
+}
+
+
+
+
+
+
+
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(180.08deg, #12212E 41.88%, #375B68 92.6%);
+    border-radius: 0px 36px 36px 36px;
+    padding: 20px 42px;
+}
+
+.options h3{
+    font-size: 1.5rem;
+}
+
+.options p{
+    line-height: 1.5;
+}
+
+.options-image{
+    display: flex;
+    gap: 20px;
+}
