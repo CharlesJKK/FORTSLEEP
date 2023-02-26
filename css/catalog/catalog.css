@@ -17,8 +17,8 @@
 
 .catalog-container{
     display: flex;
-    padding: 60px 80px;
     align-self: center;
+    padding-top: 60px;
 }
 
 .catalog-options{
@@ -27,9 +27,10 @@
     gap: 20px;
 }
 
-.catalog-options li img{
-    padding: 10px;
-    min-width: 80px;
+.catalog-options li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .optionOn{
@@ -43,7 +44,8 @@
     gap: 20px;
     background: linear-gradient(180.08deg, #12212E 41.88%, #375B68 92.6%);
     border-radius: 0px 36px 36px 36px;
-    padding: 20px 42px;
+    padding: 20px 42px 100px 42px;
+    max-width: 92%;
 }
 
 .options h3{
@@ -57,12 +59,82 @@
 .options-image{
     display: flex;
     gap: 20px;
-    max-width: 1400px;
     overflow-x: auto;
 }
 
 .options-image li{
-    height: auto;
-    flex: 1;
-    width: max-content;
+    max-width: 330px;
+    flex: 1 1 auto
+}
+
+@media (max-width: 1200px){
+
+    .options-image li{
+        min-width: 280px;
+        flex: 1 1 auto
+    }
+
+}
+
+@media (max-width: 800px){
+
+    .catalog-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-options{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .catalog-options li:last-child{
+        transform: rotate(268deg);
+    }
+
+    .optionOn{
+        background: linear-gradient( #436E7E 10.28%, #12212E 89.59%);
+        border-radius: 50px 50px 0px 0px;
+    }
+
+    .options{
+        min-width: 100%;
+    }
+
+    .options-image{
+        gap: 40px;
+    }
+
+    .options-image li{
+        min-width: 150px;
+        flex: 1 1 auto
+    }
+
+}
+
+@media (max-width: 400px){
+
+    #catalog h2{
+        font-size: 1.8rem;
+    }
+
+    .catalog-options{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    }
+
+    .optionOn{
+        background: linear-gradient( #436E7E 10.28%, #12212E 89.59%);
+        border-radius: 50px 50px 50px 50px;
+    }
+
+    .options h3{
+        font-size: 1.3rem;
+    }
+    
+    .options p{
+        display: none;
+    }
+
 }
